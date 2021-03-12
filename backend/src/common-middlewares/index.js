@@ -28,6 +28,28 @@ exports.userMiddleware= (req,res,next) => {
   next();
 }
 
+exports.farmerMiddleware= (req,res,next) => {
+  if(req.farmer.role !== 'farmer')
+  {
+    return res.status(400).json({
+      message : "Farmer Access Denied"
+    })
+  }
+
+  next();
+}
+
+exports.isFarmerVerifiedMiddleware= (req,res,next) => {
+  if(req.farmer.isVerified !== 'true')
+  {
+    return res.status(400).json({
+      message : "Farmer Access Denied"
+    })
+  }
+
+  next();
+}
+
 // exports.adminMiddleware = (req,res,next) => {
 //   if(req.user.role !== 'admin')
 //   {

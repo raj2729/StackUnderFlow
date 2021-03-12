@@ -8,6 +8,7 @@ const cors = require('cors');
 // User Routes
 const authRoutes = require('./routes/auths');
 const adminRoutes = require('./routes/admin/auths');
+const farmerRoutes = require('./routes/farmers');
 // const categoryRoutes = require('./routes/category');
 // const productRoutes = require('./routes/product');
 // const cartRoutes = require('./routes/cart');
@@ -22,6 +23,7 @@ env.config();
 
 const url = `mongodb://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0-shard-00-00.hzuxj.mongodb.net:27017,cluster0-shard-00-01.hzuxj.mongodb.net:27017,cluster0-shard-00-02.hzuxj.mongodb.net:27017/${process.env.MONGO_DB_DATABASE}?ssl=true&replicaSet=atlas-vu0mam-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
+// const url = `mongodb+srv://raj2729:Sanghavi@123@flipkart.uvjxc.mongodb.net/ecommerce-flipkart?retryWrites=true&w=majority`;
 
 
 
@@ -46,6 +48,7 @@ app.use('/public' , express.static(path.join(__dirname , 'uploads' )));
 
 app.use('/api' , authRoutes);
 app.use('/api' , adminRoutes);
+app.use('/api' , farmerRoutes);
 // app.use('/api' , categoryRoutes);
 // app.use('/api' , productRoutes);
 // app.use('/api' , cartRoutes);

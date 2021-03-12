@@ -1,10 +1,6 @@
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
 
-
-const Farmer = require('../../models/farmer');
-
-
 exports.signup = async (req,res,next) => {
   await User.findOne({ email : req.body.email }).exec((error , user) => {
     if(user) 
@@ -90,38 +86,4 @@ exports.signout = (req,res,next) => {
   res.status(200).json({
     message : "Signout successfully"
   })
-}
-
-exports.getCertificates = async(req,res,next) => {
-  try{
-
-    let response =  await Farmer.find()
-    let certificatePhotos=[];
-
-    // const items = [12, 24, 36]; 
-        // const copy = []; 
-  
-        response.forEach(function (item) { 
-            certificatePhotos.push({farmerId : `${item._id}`,certificateId : item.certificatePhoto[0].img}); 
-        }); 
-
-    // res.send(response);
-    // let certificatePhoto=[];
-    // if(response){
-    //   certificatePhoto = response.map(data => {
-    //     return data.certificatePhoto.img
-    //   })
-    // }
-    // res.send(certificatePhoto);
-    res.status(200).json({
-      // response : response,
-      certificatePhotos
-    })
-
-  }
-  catch(err) {
-
-    res.send("Error while loading Certificates")
-      
-  }
 }

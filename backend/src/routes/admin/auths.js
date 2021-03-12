@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { signup , signin , signout  } = require('../../controllers/admin/auth');
+const { signup , signin , signout , getCertificates } = require('../../controllers/admin/auth');
 const { validateSignupRequest , validateSigninRequest , isRequestValidated } = require('../../validators/auth');
 
 const { requireSignin } = require('../../common-middlewares')
@@ -20,5 +20,10 @@ router
   .route('/admin/signout')
 
   .post( requireSignin , signout) 
+
+router
+  .route('/admin/certificates')
+
+  .get( getCertificates) 
 
 module.exports = router;
