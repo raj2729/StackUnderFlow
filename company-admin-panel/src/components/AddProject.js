@@ -119,6 +119,26 @@ export default function AddProject() {
               <Map />
             </Box>
           </Grid>
+          {/* ################################################### */}
+          <Grid item xs={6} className={classes.item}>
+            <TextField
+              style={{ width: "100%" }}
+              placeholder="Latitude"
+              id="outlined-basic"
+              label="Latitude"
+              variant="outlined"
+            />
+          </Grid>
+          <Grid item xs={6} className={classes.item}>
+            <TextField
+              style={{ width: "100%" }}
+              placeholder="Longitude"
+              id="outlined-basic"
+              label="Longitude"
+              variant="outlined"
+            />
+          </Grid>
+          {/* ################################################## */}
           <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
             <Button
               variant="contained"
