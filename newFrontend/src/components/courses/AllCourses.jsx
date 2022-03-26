@@ -41,7 +41,6 @@ function AllCourses() {
 					Children.toArray(
 						coursesByType.map(eachType => (
 							<div className="bg-[#fffbfb] px-16 h-[100%] pt-8 select-none lg:pt-16">
-				<h1 style={{fontSize:"40px", fontWeight:"bold"}}>Ongoing Construction Projects</h1>
 
 								<h2 className="text-4xl font-semibold w-full text-slate-700 uppercase">
 									{eachType?.type}

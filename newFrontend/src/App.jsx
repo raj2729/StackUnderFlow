@@ -24,7 +24,8 @@ import Navbar from "./pages/Navbar";
 import Blogs from "./pages/Blogs";
 import ParticularBlog from "./pages/ParticularBlog";
 import Community from "./components/Community/Community";
-import { Home, CourseDetails, NotFound } from "./pages";
+import { Home, CourseDetails, NotFound} from "./pages";
+import HomeHindi from "./pages/HomeHindi";
 import { Login, Signup } from "./components/Auth";
 import alanBtn from "@alan-ai/alan-sdk-web";
 // import Navbar from "./components/header/Navbar";
@@ -33,7 +34,7 @@ import Contact from "./components/ContactUs/ContactUs";
 import About from "./components/AboutUs/AboutUs";
 import AllCourses from "./components/courses/AllCourses";
 import axios from "axios";
-import EventsAttended from "./pages/EventsAttended";
+import CoursesCompleted from "./pages/CoursesCompleted";
 import GiftCard from "./pages/GiftCard";
 import LeaderBoard from "./pages/LeaderBoard";
 import InfluencersLeaderboard from "./pages/InfluencersLeaderboard";
@@ -81,14 +82,14 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
     setTimeout(() => setLoading(false), 1500);
   }, []);
   const navigate = useNavigate();
-  // const alanKey =
-  //   "cfdac5b36d0a78de9cd6709b0a7e592e2e956eca572e1d8b807a3e2338fdd0dc/stage";
+  const alanKey =
+    "cfdac5b36d0a78de9cd6709b0a7e592e2e956eca572e1d8b807a3e2338fdd0dc/stage";
   // useEffect(() => {
   //   alanBtn({
   //     key: alanKey,
   //     onCommand: ({ command }) => {
   //       if (command === "login") {
-  //         navigate("/signin");
+  //         navigate("/login");
   //       } else if (command === "signup") {
   //         navigate("/signup");
   //       } else if (command === "home") {
@@ -114,12 +115,13 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
           <Navbar />
           <Suspense fallback={<Loading />}>
             <Routes>
+           
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/contactus" element={<Contact />} />
               <Route path="/about-us" element={<About />} />
-              <Route path="/all-courses" element={<AllCourses />} />
+              <Route path="/all-courses" element={<><AllCourses /></>} />
               <Route
                 path="/my-profile"
                 element={
@@ -148,17 +150,18 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
               <Route path="/create-assignment" element={<CreateAssignment />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blog/particularBlog" element={<ParticularBlog />} />
-              <Route path="/eventsAttended" element={<EventsAttended />} />
+              <Route path="/coursesCompleted" element={<CoursesCompleted />} />
               <Route path="/giftCard" element={<GiftCard />} />
               <Route path="/leaderboard" element={<LeaderBoard />} />
               <Route path="/influencersLeaderboard" element={<InfluencersLeaderboard />} />
               <Route path="/logisticsdashboard" element={<LogisticsDashboard />} />
               <Route path="/map" element={<Map />} />
               <Route path="/notes" element={<Notes />} exact />
-              <Route path="/kanbanboard" element={<KanbanBoard />} exact />
+             <Route path="/kanbanboard" element={<KanbanBoard />} exact />
+              <Route path="/hin" element={<HomeHindi />} exact />
               {/* <Route path="/stories" element={<Stories />} exact /> */}
               <Route path="/*" element={<NotFound />} />
-              <Route
+              <Route 
                 path="all-courses/coursedetails/:id"
                 element={<CourseDetails />}
               />

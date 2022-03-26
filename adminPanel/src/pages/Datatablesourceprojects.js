@@ -38,35 +38,35 @@ export const projectColumns = [
   export const projectRows = [
     {
       id: 1,
-      username: "Sunview Heights",
+      name: "Sunview Heights",
       img: "https://images.pexels.com/photos/10283734/pexels-photo-10283734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       status: "active",
-      email: "Andheri West, Mumbai",
-      age: 35,
+      location: "Andheri West, Mumbai",
+      time: new Date()
     },
     {
       id: 2,
-      username: "Ganji Nivaas",
+      name: "Ganji Nivaas",
       img: "https://images.pexels.com/photos/10283734/pexels-photo-10283734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       status: "pending",
-      email: "Thane, Mumbai",
-      age: 42,
+      location: "Thane, Mumbai",
+      time: new Date()
     },
     {
       id: 3,
-      username: "Niles Apartments",
+      name: "Niles Apartments",
       img: "https://images.pexels.com/photos/10283734/pexels-photo-10283734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       status: "passive",
-      email: "Sagarcity, Pune",
-      age: 45,
+      location: "Sagarcity, Pune",
+      time: new Date()
     },
     {
       id: 4,
-      username: "Caribbean B",
+      name: "Caribbean B",
       img: "https://images.pexels.com/photos/10283734/pexels-photo-10283734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       status: "passive",
-      email: "Vile Parle, Mumbai",
-      age: 16,
+      location: "Vile Parle, Mumbai",
+      time: new Date()
     }
   ];
   

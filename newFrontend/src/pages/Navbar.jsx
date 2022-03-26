@@ -88,6 +88,7 @@ const Navbar = () => {
   const classes = useStyles();
   // const [anchorEl, setAnchorEl] = React.useState(null);
   // const open = Boolean(anchorEl);
+  const navigate = useNavigate()
   const [openslider, setOpenslider] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpenslider(true);
@@ -148,13 +149,15 @@ const Navbar = () => {
               Construction Buddy
             </Link>
           </Typography>
+          
           <Select
             style={{ marginRight: "20px" }}
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             label="Age"
-            onChange={handleChange}
+            // onChange={handleChange}
           >
+            <Link to="/">
             <MenuItem
               value={10}
               onClick={() => {
@@ -163,6 +166,8 @@ const Navbar = () => {
             >
               English
             </MenuItem>
+            </Link>
+            <Link to="/hin">
             <MenuItem
               value={20}
               onClick={() => {
@@ -171,6 +176,7 @@ const Navbar = () => {
             >
               हिंदी
             </MenuItem>
+            </Link>
           </Select>
 
           <div>
@@ -259,15 +265,15 @@ const Navbar = () => {
           </List>
         </Link>
         <Link
-          to={`/eventsAttended`}
+          to={`/coursesCompleted`}
           style={{ textDecoration: "none", color: "black" }}
         >
           <List>
-            <ListItem button key="Events Attended">
+            <ListItem button key="Projects Completed">
               <ListItemIcon>
                 <VerifiedUserIcon />
               </ListItemIcon>
-              <ListItemText primary="Events Attended" />
+              <ListItemText primary="Projects Completed" />
             </ListItem>
           </List>
         </Link>

@@ -119,7 +119,7 @@ const generatePDF = async (name, email, event, date) => {
             // `has successfully completed the ${course} on ${new Date(
             //   Date.now()
             // ).toLocaleDateString()}.`
-            `has successfully completed the Event with NGO in ${event} on ${date}.`,
+            `has successfully completed the Course with Construction BUddy in ${event} on ${date}.`,
             {
                 align: "center",
             }

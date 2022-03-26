@@ -23,7 +23,7 @@ const donationRoutes = require("./routes/donationRoutes");
 dotenv.config();
 
 // Connecting to mongodb server
-connectDB();
+// connectDB();
 
 // express application
 const app = express();

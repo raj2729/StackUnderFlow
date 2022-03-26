@@ -34,7 +34,7 @@ const sendCertificate = async (e) => {
     body: JSON.stringify({
       name: "Ram",
       email: "rajsanghavi9@gmail.com",
-      event: "Beach Cleaning",
+      event: "English Speaking",
       date: "22 Feb 2022",
     }),
   });
@@ -55,42 +55,42 @@ const sendCertificate = async (e) => {
 
 const rows = [
   createData(
-    "Beach Cleaning 1",
+    "English Speaking",
     "22-2-2022",
-    "Mumbai",
+    "Andheri, Mumbai",
     "Details",
     "Get Certificate"
   ),
   createData(
-    "Beach Cleaning 2",
+    "Phone Payment",
     "22-2-2022",
-    "Mumbai",
+    "Borivali, Mumbai",
     "Details",
     "Get Certificate"
   ),
   createData(
-    "Beach Cleaning 3",
+    "English Speaking",
     "22-2-2022",
-    "Mumbai",
+    "Pumhouse, Mumbai",
     "Details",
     "Get Certificate"
   ),
   createData(
-    "Beach Cleaning 4",
+    "English Speaking",
     "22-2-2022",
-    "Mumbai",
+    "Lokhandwala, Mumbai",
     "Details",
     "Get Certificate"
   ),
   createData(
-    "Beach Cleaning 5",
+    "English Speaking",
     "22-2-2022",
-    "Mumbai",
+    "Lokhandwala, Mumbai",
     "Details",
     "Get Certificate"
   ),
 ];
-const EventsAttended = () => {
+const CoursesCompleted = () => {
   const classes = useStyles();
   const navigate = useNavigate();
   const name = "Ram";
@@ -108,13 +108,13 @@ const EventsAttended = () => {
         }}
       >
         <div style={{ margin: "100px" }}>
-          <h1 style={{ textAlign: "center", fontSize:"40px", fontWeight:"bold" }}>Events Attended</h1>
+          <h1 style={{ textAlign: "center", fontSize:"40px", fontWeight:"bold" }}>Courses Completed</h1>
           <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell>
-                    <h3 style={{ textAlign: "center", fontSize:"20px" }}>Event</h3>
+                    <h3 style={{ textAlign: "center", fontSize:"20px" }}>Course</h3>
                   </TableCell>
                   <TableCell align="right">
                     <h3 style={{ textAlign: "center", fontSize:"20px" }}>Date</h3>
@@ -168,4 +168,4 @@ const EventsAttended = () => {
   );
 };
 
-export default EventsAttended;
+export default CoursesCompleted;
