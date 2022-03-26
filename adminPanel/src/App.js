@@ -15,6 +15,7 @@ import { userInputs, BlogInputs } from "./pages/FormSource";
 import Blogs from "./pages/allBlogs/Blogs";
 import Statistics from "./pages/Statistics/Statistics";
 import Chatbot from "./components/Chatbot";
+import Workers from "./components/Workers/Workers";
 // import Dashboard from "./components/adminPanelCompany/Dashboard";
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="notification" element={<Notification />} />
             <Route path="Statistics" element={<Statistics />} />
             <Route path="allblogs" element={<Blogs />} />
+            <Route path="assignWorkers" element={<Workers />} />
           </Route>
           <Route path="users">
             <Route index element={<List />} />

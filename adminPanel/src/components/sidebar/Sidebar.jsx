@@ -50,10 +50,10 @@ const Sidebar = () => {
               <span>Inventory</span>
             </li>
           </Link>
-          <Link to="/allblogs" style={{ textDecoration: "none" }}>
+          <Link to="/assignWorkers" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
-              <span>Blogs</span>
+              <span>Workers</span>
             </li>
           </Link>
           {/* <li>
