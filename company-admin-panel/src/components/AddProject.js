@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    // height: "100vh",
   },
   item: {
     padding: theme.spacing(3),
@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   form: {
     alignSelf: "center",
   },
+  mapBox: {},
   // dropDown: {
   //   width: "500px",
   // },
@@ -114,7 +115,9 @@ export default function AddProject() {
             </FormControl>
           </Grid>
           <Grid item xs={12} className={classes.item}>
-            <Map />
+            <Box style={{ marginTop: "-100px" }}>
+              <Map />
+            </Box>
           </Grid>
           <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
             <Button

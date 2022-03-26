@@ -24,8 +24,11 @@ function Map() {
   };
   return (
     <>
-      <div style={{ backgroundColor: "#87d5fa", paddingTop: "20px" }}>
+      <div>
         <MapContainer
+          style={{
+            height: "500px",
+          }}
           // center={[20.5937, 78.9629]}
           center={[19.096893719743967, 72.87301867005657]}
           zoom={13}
