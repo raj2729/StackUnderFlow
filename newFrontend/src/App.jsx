@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
-import useStore from './context/useStore'
+import useStore from "./context/useStore";
 
 import {
   CreateAssignment,
@@ -39,10 +39,11 @@ import InfluencersLeaderboard from "./pages/InfluencersLeaderboard";
 import LogisticsDashboard from "./pages/LogisticsDashboard";
 import KanbanBoard from "./pages/KanbanBoard";
 // import Stories from "./pages/Stories"
-import Notes from "./pages/Notes/Notes"
+import Notes from "./pages/Notes/Notes";
+import Map from "./components/Map";
 function App() {
   const [loading, setLoading] = useState(true);
-  let stylesForProfile = 'bg-red-800'
+  let stylesForProfile = "bg-red-800";
   useEffect(() => {
     // const qry=`
     // query Query{
@@ -80,7 +81,7 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
     setTimeout(() => setLoading(false), 1500);
   }, []);
 
-//18 Mar 2022 - added Global Context from ThemeContext
+  //18 Mar 2022 - added Global Context from ThemeContext
   return (
     <>
       {loading ? (
@@ -127,17 +128,20 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
               <Route path="/eventsAttended" element={<EventsAttended />} />
               <Route path="/giftCard" element={<GiftCard />} />
               <Route path="/leaderboard" element={<LeaderBoard />} />
-              <Route path="/influencersLeaderboard" element={<InfluencersLeaderboard />} />
-              <Route path="/logisticsdashboard" element={<LogisticsDashboard />} />
+              <Route
+                path="/influencersLeaderboard"
+                element={<InfluencersLeaderboard />}
+              />
+              <Route
+                path="/logisticsdashboard"
+                element={<LogisticsDashboard />}
+              />
               <Route path="/map" element={<Map />} />
               <Route path="/notes" element={<Notes />} exact />
               <Route path="/kanbanboard" element={<KanbanBoard />} exact />
               {/* <Route path="/stories" element={<Stories />} exact /> */}
               <Route path="/*" element={<NotFound />} />
-              <Route
-                path="/coursedetails/:id"
-                element={<CourseDetails />}
-              />
+              <Route path="/coursedetails/:id" element={<CourseDetails />} />
             </Routes>
             <Footer />
           </Suspense>
