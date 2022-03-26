@@ -16,6 +16,7 @@ import Blogs from "./pages/allBlogs/Blogs";
 import Statistics from "./pages/Statistics/Statistics";
 import Chatbot from "./components/Chatbot";
 import Workers from "./components/Workers/Workers";
+import Attendance from "./components/Attendance";
 // import Dashboard from "./components/adminPanelCompany/Dashboard";
 
 function App() {
@@ -72,6 +73,15 @@ function App() {
           </Route>
           <Route path="inventory">
             <Route index element={<ListInventory />} />
+
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
+          <Route path="attendance">
+            <Route index element={<Attendance />} />
 
             <Route path=":userId" element={<Single />} />
             <Route

@@ -95,20 +95,38 @@ function DraggableMarker() {
   }, [markerRef.current]);
 
   return (
-    <Marker
-      draggable={true}
-      eventHandlers={eventHandlers}
-      position={position}
-      ref={markerRef}
-    >
-      <Popup minWidth={90}>
-        <span onClick={toggleDraggable}>
-          {draggable
-            ? "Marker is draggable"
-            : "Click here to make marker draggable"}
-        </span>
-      </Popup>
-    </Marker>
+    <>
+      <div>
+        <MapContainer
+          style={{
+            height: "500px",
+          }}
+          // center={[20.5937, 78.9629]}
+          center={[19.096893719743967, 72.87301867005657]}
+          zoom={13}
+          scrollWheelZoom={true}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker
+            position={[19.120961066015365, 72.85161434796963]}
+            icon={ConstructionIcon}
+          >
+            <Popup>Old Age Home</Popup>
+            <Tooltip>Carewell Nursing Home</Tooltip>
+          </Marker>
+          <Marker
+            position={[19.100304881548656, 72.84920310381105]}
+            icon={ConstructionIcon}
+          >
+            <Popup>Old Age Home</Popup>
+            <Tooltip>Navjivan Nursing Home</Tooltip>
+          </Marker>
+        </MapContainer>
+      </div>
+    </>
   );
 }
 

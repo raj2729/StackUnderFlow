@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    // height: "100vh",
   },
   item: {
     padding: theme.spacing(3),
@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   form: {
     alignSelf: "center",
   },
+  mapBox: {},
   // dropDown: {
   //   width: "500px",
   // },
@@ -114,8 +115,30 @@ export default function AddProject() {
             </FormControl>
           </Grid>
           <Grid item xs={12} className={classes.item}>
-            <Map />
+            <Box style={{ marginTop: "-100px" }}>
+              <Map />
+            </Box>
           </Grid>
+          {/* ################################################### */}
+          <Grid item xs={6} className={classes.item}>
+            <TextField
+              style={{ width: "100%" }}
+              placeholder="Latitude"
+              id="outlined-basic"
+              label="Latitude"
+              variant="outlined"
+            />
+          </Grid>
+          <Grid item xs={6} className={classes.item}>
+            <TextField
+              style={{ width: "100%" }}
+              placeholder="Longitude"
+              id="outlined-basic"
+              label="Longitude"
+              variant="outlined"
+            />
+          </Grid>
+          {/* ################################################## */}
           <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
             <Button
               variant="contained"
