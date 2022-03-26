@@ -50,7 +50,7 @@ function HeroSection({ course }) {
 								}),
 							)}
 						</div>
-						{ isNotSubcribed ?
+						{/* { isNotSubcribed ?
 							<Button isPrimary={true} onClick={openCourseHandler}>
 								Get started
 							</Button>
@@ -58,7 +58,10 @@ function HeroSection({ course }) {
 							<Button isPrimary={true}>
 								Enroll
 							</Button>
-						}
+						} */}
+						<Button onClick={openCourseHandler} isPrimary={true}>
+								Enroll
+							</Button>
 					</div>
 				</div>
 				<div

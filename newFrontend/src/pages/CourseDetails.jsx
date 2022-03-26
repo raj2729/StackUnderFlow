@@ -24,6 +24,7 @@ const CourseDetails = () => {
 
 	return (
 		<>
+		<h1>Ongoing Construction Projects</h1>
 			<HeroSection course={current} />
 			<DetailsNavigation />
 			<div className="px-4 py-6 grid grid-cols-1 text-gray-600 bg-white lg:grid-cols-6 lg:px-16 lg:py-8 lg:gap-2">

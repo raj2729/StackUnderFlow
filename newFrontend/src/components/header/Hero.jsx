@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 function Hero() {
   const bluePrint = {
-    heading: "Hold our hand on the path of your career.",
+    heading: "We make your WORK easy",
     subHeading:
       "Take on the professional world by learning and practicing in-demand skills with us.",
     callToAction: "Enroll Now",

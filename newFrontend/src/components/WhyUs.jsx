@@ -34,7 +34,7 @@ const {theme} = useStore()
 			id="about"
 		>
 			<div className="flex-1 flex flex-col items-start gap-4 lg:flex-[0.5]">
-				<SectionHeading subHeading="WhyUs?" heading="Why Learn Here?" />
+				<SectionHeading subHeading="WhyUs?" heading="Get details of your projects" />
 				<p className={paraStyles} >
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius
 					est ducimus eos, pariatur labore, necessitatibus explicabo repudiandae

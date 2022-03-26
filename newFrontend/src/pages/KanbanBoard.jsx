@@ -509,8 +509,162 @@
 
 // // export default KanbanBoard
 import React from 'react'
+// import {
+//   Box,
+//   Container,
+//   Typography,
+//   Tabs,
+//   Tab,
+//   Card,
+//   Paper,
+//   CardContent,
+//   FormControl,
+//   RadioGroup,
+//   FormControlLabel,
+//   Radio,
+//   Button,
+//   CardActions,
+// } from "@mui/icons-material";
+// import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
+// import StarHalfRoundedIcon from "@mui/icons-material/StarHalfRounded";
+// import StarRoundedIcon from "@mui/icons-material/StarRounded";
+// import ReceiptLongRoundedIcon from "@mui/icons-material/ReceiptLongRounded";
+// import HelpOutlineRoundedIcon from "@mui/icons-material/HelpOutlineRounded";
+
+// import React, { useState, useEffect } from "react";
+// import { Link, useParams } from "react-router-dom";
+// import Board, { moveCard } from "@asseinfo/react-kanban";
+// import "@asseinfo/react-kanban/dist/styles.css";
 
 const KanbanBoard = () => {
+    const board = {
+    columns: [
+      {
+        id: 1,
+        title: "Pending Decision",
+        cards: [
+          {
+            id: 1,
+            title: "card title 1",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 2,
+            title: "Card title 2",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 3,
+            title: "Card title 3",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "Shortlisted",
+        cards: [
+          {
+            id: 4,
+            title: "Card title 4",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 5,
+            title: "Card title 5",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 6,
+            title: "Card title 6",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "Hired",
+        cards: [
+          {
+            id: 7,
+            title: "Card title 7",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 8,
+            title: "Card title 8",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Rejected",
+        cards: [
+          {
+            id: 9,
+            title: "Card title 9",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+          {
+            id: 10,
+            title: "Card title 10",
+            description:"Description" 
+            // (
+            //   <Button variant="contained" size="small">
+            //     View Application
+            //   </Button>
+            // ),
+          },
+        ],
+      },
+    ],
+  };
   return (
     <div>KanbanBoard</div>
   )

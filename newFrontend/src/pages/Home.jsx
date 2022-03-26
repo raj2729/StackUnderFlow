@@ -17,6 +17,7 @@ const Home = () => {
 			<Header />
 			<WhyUs />
 			{/* <PopularCourses /> */}
+			<h1 style={{fontSize:"30px", fontWeight:"bold", backgroundColor:"white", paddingLeft:"100px"}}>Ongoing Construction Projects</h1>
 			<AllCourses />
 			<div className="text-center pt-8" style={{backgroundColor:"white"}}>
 				<Link to="/all-courses">
