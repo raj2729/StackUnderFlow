@@ -19,7 +19,7 @@ const CourseCard = ({
 const allProjectsData = useState({id:"1", name:"Project 1", description:"project 1 description"}, {id:"2", name:"Project 2", description:"project 2 description"})
 	return (
 		<ErrorBoundary fallback={'error in course page'}>
-			<Link to={`/coursedetails/${current?.id}`}>
+			<Link to={`all-courses/coursedetails/${current?.id}`}>
 				<div className="rounded-sm relative w-[21rem] shadow-md overflow-hidden cursor-pointer border-4 border-grey shadow-2xl">
 					<div className="h-[12rem] rounded-t-sm overflow-hidden relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[rgba(255,118,118,0.09)]">
 						<img

@@ -27,14 +27,16 @@ const Signup = () => {
     e.preventDefault();
     signup(signupData);
   };
+  const [nameOfPerson, setNameOfPerson] = useState("")
 
   //if the id is available, redirect to homepage
   useEffect(() => {
+    localStorage.getItem("name")
     if (user?.id) {
       navigate("/");
     }
-  }, [user]);
-
+  }, [user, nameOfPerson]);
+// const nameofperson = localStorage.getItem("name")
   return (
     <div style={{marginTop:"60px"}} className="bg-red-800  flex items-center justify-center min-h-full  py-8">
       <div className="relative bg-white w-[25rem] mx-2 py-14 flex items-center justify-center rounded-xl sm:w-[30rem]">
@@ -49,6 +51,7 @@ const Signup = () => {
               type="text"
               label="name"
               icon="PERSON"
+              value = {nameOfPerson}
               onChange={getSignupData}
             />
             <FormControl
