@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
   Button,
+  FormControl,
   Grid,
   Input,
+  InputLabel,
+  Select,
   TextField,
   Typography,
+  MenuItem,
 } from "@material-ui/core";
+
+import { contractorData } from "./data";
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     width: "50%",
     border: "3px solid black",
-    // borderRadius: "5%",
+    // borderRadcius: "5%",
   },
   box: {
     display: "flex",
@@ -33,9 +39,19 @@ const useStyles = makeStyles((theme) => ({
   title: {
     margin: theme.spacing(2),
   },
+  form: {
+    alignSelf: "center",
+  },
+  // dropDown: {
+  //   width: "500px",
+  // },
 }));
 
 export default function AddProject() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(contractorData);
+  }, [contractorData]);
   const classes = useStyles();
   return (
     <Box className={classes.box}>
@@ -66,15 +82,46 @@ export default function AddProject() {
             style={{ width: "100%" }}
             placeholder="Enter Number of Workers required"
             id="outlined-basic"
-            label="Enter Number of Workers requiredt"
+            label="Enter Number of Workers required"
             variant="outlined"
           />
+        </Grid>
+        <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
+          <FormControl variant="outlined" style={{ width: "400px" }}>
+            <InputLabel id="demo-simple-select-outlined-label">
+              Select Contractor
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-outlined-label"
+              id="demo-simple-select-outlined"
+              // value={age}
+              // onChange={handleChange}
+              label="Age"
+            >
+              {data.map((each, key) => {
+                return (
+                  <MenuItem key={key} value={each.name}>
+                    {each.name}
+                  </MenuItem>
+                );
+              })}
+              {/* <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem> */}
+            </Select>
+          </FormControl>
         </Grid>
         <Grid item xs={12} className={classes.item}>
           // Map daal yaha Raj
         </Grid>
         <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              alert("Submitted");
+            }}
+          >
             Submit
           </Button>
         </Grid>

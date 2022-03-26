@@ -103,7 +103,7 @@ function Dashboard() {
             </h1>
             <br />
             {/* if you want 3 cards in a line */}
-            <Grid container alignItems="center" justify="center">
+            <Grid container alignItems="center" justifyContent="center">
               <Grid item xs={12} sm={4}>
                 <Card className="userscard" style={{ marginLeft: "70px" }}>
                   <h2 style={{ marginTop: "20px", textAlign: "center" }}>
