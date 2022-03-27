@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import List from "./pages/list/List";
 import ListProject from "./pages/list/ListProject";
+import ListInventory from "./pages/list/ListInventory";
 import Notification from "./pages/Notification/Notification";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
@@ -14,6 +15,9 @@ import { userInputs, BlogInputs } from "./pages/FormSource";
 import Blogs from "./pages/allBlogs/Blogs";
 import Statistics from "./pages/Statistics/Statistics";
 import Chatbot from "./components/Chatbot";
+import Workers from "./components/Workers/Workers";
+import Attendance from "./components/Attendance";
+// import Dashboard from "./components/adminPanelCompany/Dashboard";
 import HindiHome from "./pages/Home/HindiHome"
 import Logistics from "./pages/Logistics";
 function App() {
@@ -48,6 +52,7 @@ useEffect(() => {
               <Route path="notification" element={<Notification />} />
               <Route path="Statistics" element={<Statistics />} />
               <Route path="allblogs" element={<Blogs />} />
+              <Route path="assignWorkers" element={<Workers />} />
             </Route>
             <Route path="/hin" element={<HindiHome />} exact />
             {/* <Route path="/hin">
@@ -60,33 +65,59 @@ useEffect(() => {
             <Route path="users">
               <Route index element={<List />} />
 
-              <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title="Add users" />}
-              />
-            </Route>
-            <Route path="projects">
-              <Route index element={<ListProject />} />
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
+          <Route path="projects">
+            <Route index element={<ListProject />} />
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
+          <Route path="inventory">
+            <Route index element={<ListInventory />} />
 
-              <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title="Add users" />}
-              />
-            </Route>
-            <Route path="blogs">
-              <Route index element={<List />} />
-              <Route path=":blogId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={BlogInputs} title="Add Blog" />}
-              />
-            </Route>
-            <Route path="logistics" element={<Logistics />} />
-          </Routes>
-          <Chatbot />
-        </div>
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
+          <Route path="attendance">
+            <Route index element={<Attendance />} />
+
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
+          {/* <Route path="dashboard">
+            <Route index element={<Dashboard />} />
+
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route> */}
+          <Route path="blogs">
+            <Route index element={<List />} />
+            <Route path=":blogId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={BlogInputs} title="Add Blog" />}
+            />
+          </Route>
+          <Route path="logistics" element={<Logistics />} />
+        </Routes>
+        <Chatbot />
+      </div>
     </div>
   );
 }

@@ -44,10 +44,16 @@ const Sidebar = () => {
               <span>Projects</span>
             </li>
           </Link>
-          <Link to="/allblogs" style={{ textDecoration: "none" }}>
+          <Link to="/inventory" style={{ textDecoration: "none" }}>
+            <li>
+              <GroupIcon className="icon" />
+              <span>Inventory</span>
+            </li>
+          </Link>
+          <Link to="/assignWorkers" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
-              <span>Blogs</span>
+              <span>Workers</span>
             </li>
           </Link>
           <Link to="/logistics" style={{ textDecoration: "none" }}>

@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense, useContext } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import useStore from './context/useStore'
+import useStore from "./context/useStore";
 
 import {
   CreateAssignment,
@@ -24,7 +24,7 @@ import Navbar from "./pages/Navbar";
 import Blogs from "./pages/Blogs";
 import ParticularBlog from "./pages/ParticularBlog";
 import Community from "./components/Community/Community";
-import { Home, CourseDetails, NotFound} from "./pages";
+import { Home, CourseDetails, NotFound } from "./pages";
 import HomeHindi from "./pages/HomeHindi";
 import { Login, Signup } from "./components/Auth";
 import alanBtn from "@alan-ai/alan-sdk-web";
@@ -43,9 +43,10 @@ import KanbanBoard from "./pages/KanbanBoard";
 // import Stories from "./pages/Stories"
 import Notes from "./pages/Notes/Notes"
 import SpeechyForm from "./pages/SpeechyForm";
+import Map from "./components/Map";
 function App() {
   const [loading, setLoading] = useState(true);
-  let stylesForProfile = 'bg-red-800'
+  let stylesForProfile = "bg-red-800";
   useEffect(() => {
     // const qry=`
     // query Query{
@@ -116,13 +117,19 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
           <Navbar />
           <Suspense fallback={<Loading />}>
             <Routes>
-           
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/contactus" element={<Contact />} />
               <Route path="/about-us" element={<About />} />
-              <Route path="/all-courses" element={<><AllCourses /></>} />
+              <Route
+                path="/all-courses"
+                element={
+                  <>
+                    <AllCourses />
+                  </>
+                }
+              />
               <Route
                 path="/my-profile"
                 element={
@@ -144,7 +151,6 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
                 <Route path="/my-profile/settings" element={<Settings />} />
               </Route>
               {/* <Route path="/my-courses" element={<MyCourses />} /> */}
-
               <Route path="/Community" element={<Community />} />
               <Route path="/create-course" element={<CreateCourse />} />
               <Route path="/create-quiz" element={<CreateQuiz />} />
@@ -154,16 +160,23 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
               <Route path="/coursesCompleted" element={<CoursesCompleted />} />
               <Route path="/giftCard" element={<GiftCard />} />
               <Route path="/leaderboard" element={<LeaderBoard />} />
-              <Route path="/influencersLeaderboard" element={<InfluencersLeaderboard />} />
-              <Route path="/logisticsdashboard" element={<LogisticsDashboard />} />
+              <Route
+                path="/influencersLeaderboard"
+                element={<InfluencersLeaderboard />}
+              />
+              <Route
+                path="/logisticsdashboard"
+                element={<LogisticsDashboard />}
+              />
               <Route path="/map" element={<Map />} />
               <Route path="/notes" element={<Notes />} exact />
-             <Route path="/kanbanboard" element={<KanbanBoard />} exact />
+              <Route path="/kanbanboard" element={<KanbanBoard />} exact />
               <Route path="/hin" element={<HomeHindi />} exact />
               <Route path="/editprofile" element={<SpeechyForm />} exact />
               {/* <Route path="/stories" element={<Stories />} exact /> */}
               <Route path="/*" element={<NotFound />} />
-              <Route 
+              // <Route path="/coursedetails/:id" element={<CourseDetails />} />
+              <Route
                 path="all-courses/coursedetails/:id"
                 element={<CourseDetails />}
               />
