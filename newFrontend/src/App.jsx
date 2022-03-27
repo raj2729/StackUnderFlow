@@ -42,6 +42,7 @@ import LogisticsDashboard from "./pages/LogisticsDashboard";
 import KanbanBoard from "./pages/KanbanBoard";
 // import Stories from "./pages/Stories"
 import Notes from "./pages/Notes/Notes"
+import SpeechyForm from "./pages/SpeechyForm";
 function App() {
   const [loading, setLoading] = useState(true);
   let stylesForProfile = 'bg-red-800'
@@ -84,27 +85,27 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
   const navigate = useNavigate();
   const alanKey =
     "cfdac5b36d0a78de9cd6709b0a7e592e2e956eca572e1d8b807a3e2338fdd0dc/stage";
-  // useEffect(() => {
-  //   alanBtn({
-  //     key: alanKey,
-  //     onCommand: ({ command }) => {
-  //       if (command === "login") {
-  //         navigate("/login");
-  //       } else if (command === "signup") {
-  //         navigate("/signup");
-  //       } else if (command === "home") {
-  //         navigate("/");
-  //       } else if (command === "maps") {
-  //         navigate("/map");
-  //       } else if (command === "blogs") {
-  //         navigate("/blogs");
-  //       } else if(command=="fillname"){
-  //         console.log("fillname command")
-  //         localStorage.setItem("name", "Vidhish")
-  //       }
-  //     },
-  //   });
-  // }, []);
+  useEffect(() => {
+    alanBtn({
+      key: alanKey,
+      onCommand: ({ command }) => {
+        if (command === "login") {
+          navigate("/login");
+        } else if (command === "signup") {
+          navigate("/signup");
+        } else if (command === "home") {
+          navigate("/");
+        } else if (command === "maps") {
+          navigate("/map");
+        } else if (command === "blogs") {
+          navigate("/blogs");
+        } else if(command=="fillname"){
+          console.log("fillname command")
+          localStorage.setItem("name", "Vidhish")
+        }
+      },
+    });
+  }, []);
 //18 Mar 2022 - added Global Context from ThemeContext
   return (
     <>
@@ -159,6 +160,7 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
               <Route path="/notes" element={<Notes />} exact />
              <Route path="/kanbanboard" element={<KanbanBoard />} exact />
               <Route path="/hin" element={<HomeHindi />} exact />
+              <Route path="/editprofile" element={<SpeechyForm />} exact />
               {/* <Route path="/stories" element={<Stories />} exact /> */}
               <Route path="/*" element={<NotFound />} />
               <Route 

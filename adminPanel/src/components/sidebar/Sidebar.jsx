@@ -18,7 +18,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Xcitmedia Panel</span>
+          <span className="logo">Constructor Buddy</span>
         </Link>
       </div>
       <hr />
@@ -50,6 +50,12 @@ const Sidebar = () => {
               <span>Blogs</span>
             </li>
           </Link>
+          <Link to="/logistics" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Logistics</span>
+            </li>
+          </Link>
           {/* <li>
             <ListAltIcon className="icon" />
             <span>orders</span>
@@ -76,10 +82,12 @@ const Sidebar = () => {
             <WysiwygIcon className="icon" />
             <span>System Health</span>
           </li>
+          <Link to="/login">
           <li>
             <VpnKeyIcon className="icon" />
-            <span>Logs</span>
+            <span>Login</span>
           </li>
+          </Link>
           <li>
             <SettingsIcon className="icon" />
             <span>Settings</span>

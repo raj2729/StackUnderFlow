@@ -254,6 +254,16 @@ const Navbar = () => {
             </ListItem>
           </List>
         </Link>
+        <Link to={`/editprofile`} style={{ textDecoration: "none", color: "black" }}>
+          <List>
+            <ListItem button key="Edit Profile">
+              <ListItemIcon>
+                <BookIcon />
+              </ListItemIcon>
+              <ListItemText primary="Edit Profile" />
+            </ListItem>
+          </List>
+        </Link>
         <Link to={`/blogs`} style={{ textDecoration: "none", color: "black" }}>
           <List>
             <ListItem button key="Blogs">

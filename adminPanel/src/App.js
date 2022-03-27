@@ -14,6 +14,8 @@ import { userInputs, BlogInputs } from "./pages/FormSource";
 import Blogs from "./pages/allBlogs/Blogs";
 import Statistics from "./pages/Statistics/Statistics";
 import Chatbot from "./components/Chatbot";
+import HindiHome from "./pages/Home/HindiHome"
+import Logistics from "./pages/Logistics";
 function App() {
   const navigate = useNavigate();
   const alanKey =
@@ -23,7 +25,7 @@ useEffect(() => {
     key: alanKey,
     onCommand: ({ command }) => {
       if (command === "login") {
-        navigate("/signin");
+        navigate("/login");
       } else if (command === "signup") {
         navigate("/signup");
       } else if (command === "home") {
@@ -47,6 +49,14 @@ useEffect(() => {
               <Route path="Statistics" element={<Statistics />} />
               <Route path="allblogs" element={<Blogs />} />
             </Route>
+            <Route path="/hin" element={<HindiHome />} exact />
+            {/* <Route path="/hin">
+              <Route index element={<HindiHome />} />
+              <Route path="login" element={<Login />} />
+              <Route path="notification" element={<Notification />} />
+              <Route path="Statistics" element={<Statistics />} />
+              <Route path="allblogs" element={<Blogs />} />
+            </Route> */}
             <Route path="users">
               <Route index element={<List />} />
 
@@ -73,6 +83,7 @@ useEffect(() => {
                 element={<New inputs={BlogInputs} title="Add Blog" />}
               />
             </Route>
+            <Route path="logistics" element={<Logistics />} />
           </Routes>
           <Chatbot />
         </div>
