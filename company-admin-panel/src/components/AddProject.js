@@ -12,6 +12,7 @@ import {
   Typography,
   MenuItem,
 } from "@material-ui/core";
+import Swal from "sweetalert2";
 
 import { contractorData } from "./data";
 import Map from "./Map";
@@ -55,6 +56,33 @@ export default function AddProject() {
     setData(contractorData);
   }, [contractorData]);
   const classes = useStyles();
+
+  const handleSubmit = () => {
+    Swal.fire({
+      title: `Confirm Adding Project`,
+      text: `Add project`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#8a2be2",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Confirm!",
+      showLoaderOnConfirm: true,
+    }).then(async (result) => {
+      // setShowLoading(true);
+      if (result.isConfirmed) {
+        try {
+          Swal.fire("Project has been added", `Successful`, "success");
+        } catch (err) {
+          Swal.fire(
+            `Driver is already assigned for vehicle: `,
+            `Please check again.`,
+            "error"
+          );
+        }
+      }
+    });
+  };
+
   return (
     <>
       <Box className={classes.box}>
@@ -119,34 +147,8 @@ export default function AddProject() {
               <Map />
             </Box>
           </Grid>
-          {/* ################################################### */}
-          <Grid item xs={6} className={classes.item}>
-            <TextField
-              style={{ width: "100%" }}
-              placeholder="Latitude"
-              id="outlined-basic"
-              label="Latitude"
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={6} className={classes.item}>
-            <TextField
-              style={{ width: "100%" }}
-              placeholder="Longitude"
-              id="outlined-basic"
-              label="Longitude"
-              variant="outlined"
-            />
-          </Grid>
-          {/* ################################################## */}
           <Grid item xs={12} className={`${classes.item} ${classes.centerMe}`}>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => {
-                alert("Submitted");
-              }}
-            >
+            <Button variant="contained" color="primary" onClick={handleSubmit}>
               Submit
             </Button>
           </Grid>
