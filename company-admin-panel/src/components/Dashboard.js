@@ -40,16 +40,16 @@ function Dashboard() {
           </Button>
         </ListItem>
         <ListItem>
-          <Button onClick={() => setMode("contractors")}>
+          <Button onClick={() => setMode("addproject")}>
             <h4>
-              <i className="fa fa-play-circle"></i> Contractors
+              <i className="fa fa-play-circle"></i> Add Project
             </h4>
           </Button>
         </ListItem>
         <ListItem>
-          <Button onClick={() => setMode("addproject")}>
+          <Button onClick={() => setMode("contractors")}>
             <h4>
-              <i className="fa fa-play-circle"></i> Add Project
+              <i className="fa fa-play-circle"></i> Contractors
             </h4>
           </Button>
         </ListItem>
@@ -107,7 +107,7 @@ function Dashboard() {
               <Grid item xs={12} sm={4}>
                 <Card className="userscard" style={{ marginLeft: "70px" }}>
                   <h2 style={{ marginTop: "20px", textAlign: "center" }}>
-                    Students Helped
+                    Employees Working
                   </h2>
                   <GroupIcon className="groupicon" />
                   <h2 style={{ textAlign: "center" }}>687</h2>
@@ -116,7 +116,7 @@ function Dashboard() {
               <Grid item xs={12} sm={4}>
                 <Card className="userscard" style={{ marginLeft: "50px" }}>
                   <h2 style={{ marginTop: "20px", textAlign: "center" }}>
-                    Schools Funded
+                    Construction Sites
                   </h2>
                   <AccountBalanceIcon className="groupicon" />
                   <h2 style={{ textAlign: "center" }}>5</h2>
