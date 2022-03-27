@@ -26,7 +26,7 @@ const Blogs = () => {
                 }}
                 className="title"
               >
-                Recent Blogs
+                Recent Message
               </ListSubheader>
             </ImageListItem>
             {itemData.map((item) => (

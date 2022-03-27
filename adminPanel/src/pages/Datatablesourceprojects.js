@@ -1,40 +1,39 @@
 import { Button } from "@mui/material";
 
 export const projectColumns = [
-    { field: "id", headerName: "ID", width: 70 },
-    {
-      field: "user",
-      headerName: "Project",
-      width: 280,
-      renderCell: (params) => {
-        return (
-          <div className="cellwithimg">
-            <img className="cellimg" src={params.row.img} alt="avatar" />
-            {params.row.username}
-          </div>
-        );
-      },
+  { field: "id", headerName: "ID", width: 70 },
+  {
+    field: "name",
+    headerName: "Project",
+    width: 280,
+    renderCell: (params) => {
+      return (
+        <div className="cellwithimg">
+          <img className="cellimg" src={params.row.img} alt="avatar" />
+          {params.row.name}
+        </div>
+      );
     },
-    {
-      field: "email",
-      headerName: "Address",
-      width: 280,
+  },
+  {
+    field: "location",
+    headerName: "Address",
+    width: 280,
+  },
+  {
+    field: "status",
+    headerName: "Send Report",
+    width: 200,
+    renderCell: (params) => {
+      return (
+        // <div className={`cellwithstatus ${params.row.status} `}>
+        //   {params.row.status}
+        // </div>.
+        <Button variant="contained">Send Report</Button>
+      );
     },
-    {
-      field: "status",
-      headerName: "Send Report",
-      width: 200,
-      renderCell: (params) => {
-        return (
-          // <div className={`cellwithstatus ${params.row.status} `}>
-          //   {params.row.status}
-          // </div>.
-          <Button variant="contained">Send Report</Button>
-        );
-      },
-    },
-
-  ];
+  },
+];
   export const projectRows = [
     {
       id: 1,

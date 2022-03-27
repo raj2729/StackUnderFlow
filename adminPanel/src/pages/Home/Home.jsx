@@ -23,14 +23,14 @@ const Home = () => {
         <div className="charts">
           <Chart
             aspect={2 / 1}
-            title="Total Blogs in last six months"
+            title="Total Projects in last six months"
             type={AreaChart}
             typename={Area}
           />
           <Featured />
         </div>
         <div className="listContainer">
-          <div className="listTitle">Recent Blogs</div>
+          <div className="listTitle">Blogs</div>
           <List />
         </div>
       </div>

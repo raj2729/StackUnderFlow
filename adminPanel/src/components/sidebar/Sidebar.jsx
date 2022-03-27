@@ -35,7 +35,7 @@ const Sidebar = () => {
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
-              <span>Users</span>
+              <span>Workers</span>
             </li>
           </Link>
           <Link to="/projects" style={{ textDecoration: "none" }}>
@@ -44,16 +44,16 @@ const Sidebar = () => {
               <span>Projects</span>
             </li>
           </Link>
+          <Link to="/assignWorkers" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Assign Workers</span>
+            </li>
+          </Link>
           <Link to="/inventory" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
               <span>Inventory</span>
-            </li>
-          </Link>
-          <Link to="/assignWorkers" style={{ textDecoration: "none" }}>
-            <li>
-              <CategoryIcon className="icon" />
-              <span>Workers</span>
             </li>
           </Link>
           <Link to="/logistics" style={{ textDecoration: "none" }}>
@@ -66,6 +66,28 @@ const Sidebar = () => {
             <li>
               <CategoryIcon className="icon" />
               <span>Assign Tasks</span>
+          <Link to="/attendance" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Attendance</span>
+            </li>
+          </Link>
+          <Link to="/imagetotext" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>OCR</span>
+            </li>
+          </Link>
+          <Link to="/leaderboard" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Top Workers</span>
+            </li>
+          </Link>
+          <Link to="/fundDonation" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Fund Donation</span>
             </li>
           </Link>
           {/* <li>
@@ -95,10 +117,10 @@ const Sidebar = () => {
             <span>System Health</span>
           </li>
           <Link to="/login">
-          <li>
-            <VpnKeyIcon className="icon" />
-            <span>Login</span>
-          </li>
+            <li>
+              <VpnKeyIcon className="icon" />
+              <span>Login</span>
+            </li>
           </Link>
           <li>
             <SettingsIcon className="icon" />

@@ -5,6 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 // import inventoryData from "../../data/inventoryData";
 import { contractorData } from "./data";
+import { Button } from "@material-ui/core";
 
 const customStyles = {
   //   rows: {
@@ -59,6 +60,17 @@ const Inventory = () => {
     {
       name: "Phone No.",
       selector: "phoneNo",
+      sortable: true,
+    },
+    {
+      name: "Assign a project",
+      selector: (row) => {
+        return (
+          <Button variant="contained" color="primary">
+            Assign
+          </Button>
+        );
+      },
       sortable: true,
     },
   ];

@@ -21,6 +21,9 @@ import SingleLineImageList from "./ImageRenderer";
 
 import { attendaceData } from "./data";
 
+import Navbar from "./navbar/Navbar";
+import Sidebar from "./sidebar/Sidebar";
+
 const styles = makeStyles((theme) => ({
   bar: {
     marginTop: "70px",
@@ -152,45 +155,54 @@ export default function () {
 
   return (
     <>
-      {questions.map((question, index) => {
-        const profile = question;
-        return (
-          <Card key={index} className={classes.card}>
-            <CardHeader
-              //   avatar={<Avatar style={{marginLeft: ""}} src={profile.img} />}
-              title={profile.name}
-              //   subheader={question.date}
-            />
-            <CardContent style={{ padding: "0px" }}>
-              <Grid container spacing={2} style={{ marginLeft: "150px" }}>
-                <Grid item xs={9} md={9}>
-                  <Typography variant="h6" color="textSecondary">
-                    Department: {profile.workDescription}
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary">
-                    Present: {profile.present ? "Yes" : "No"}
-                  </Typography>
-                  <Typography variant="h6" color="textSecondary">
-                    Verified By Ground Staff:{" "}
-                    {profile.workVerified ? "Yes" : "No"}
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Button
-                variant="contained"
-                color="primary"
-                style={{ marginTop: "10px", marginBottom: "10px" }}
-                onClick={() => verifyAttendance(profile)}
-              >
-                Verify Attendance
-              </Button>
-              <Grid item xs={12}>
-                <SingleLineImageList itemData={profile.images} />
-              </Grid>
-            </CardContent>
-          </Card>
-        );
-      })}
+      {/* <Navbar />
+      <Sidebar /> */}
+      <div className="home">
+        <Sidebar />
+        <div className="homeContainer">
+          <Navbar />
+          {questions.map((question, index) => {
+            const profile = question;
+            return (
+              <Card key={index} className={classes.card}>
+                <CardHeader
+                  //   avatar={<Avatar style={{marginLeft: ""}} src={profile.img} />}
+                  title={profile.name}
+                  //   subheader={question.date}
+                />
+                <CardContent style={{ padding: "0px" }}>
+                  <Grid container spacing={2} style={{ marginLeft: "140px" }}>
+                    <Grid item xs={9} md={9}>
+                      {/* <Typography variant="h6" color="textSecondary">
+                        Department: {profile.workDescription}
+                      </Typography> */}
+                      <Typography variant="h6" color="textSecondary">
+                        Present: {profile.present ? "Yes" : "No"}
+                      </Typography>
+                      <Typography variant="h6" color="textSecondary">
+                        Verified By Ground Staff:{" "}
+                        {profile.workVerified ? "Yes" : "No"}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{ marginTop: "10px", marginBottom: "10px" }}
+                    onClick={() => verifyAttendance(profile)}
+                  >
+                    Verify Attendance
+                  </Button>
+                  <Grid item xs={12}>
+                    <SingleLineImageList itemData={profile.images} />
+                  </Grid>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }
+
