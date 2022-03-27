@@ -23,6 +23,7 @@ import LeaderBoard from "./pages/LeaderBoard";
 import FundDonation from "./pages/FundDonation";
 import HindiHome from "./pages/Home/HindiHome"
 import Logistics from "./pages/Logistics";
+import AssignTasks from "./pages/AssignTasks";
 function App() {
   const navigate = useNavigate();
   const alanKey =
@@ -130,6 +131,7 @@ useEffect(() => {
           <Route path="leaderboard" exact element={<LeaderBoard />} />
           <Route path="fundDonation" exact element={<FundDonation />} />
           <Route path="logistics" element={<Logistics />} />
+          <Route path="assignTasks" element={<AssignTasks />} />
         </Routes>
         <Chatbot />
       </div>

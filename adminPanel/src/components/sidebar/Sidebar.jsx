@@ -62,6 +62,12 @@ const Sidebar = () => {
               <span>Logistics</span>
             </li>
           </Link>
+          <Link to="/assignTasks" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Assign Tasks</span>
+            </li>
+          </Link>
           <Link to="/attendance" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
@@ -133,7 +139,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <div className="bottom"></div>
+      {/* <div className="bottom"></div> */}
     </div>
   );
 };
