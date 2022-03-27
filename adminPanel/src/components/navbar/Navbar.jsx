@@ -42,7 +42,7 @@ const Navbar = () => {
         </Select>
       </FormControl>
     </Box>
-          <div className="item">
+          <div className="item" style={{position:"relative", bottom:"10px"}}>
             <ExitToAppIcon className="icon" />
           </div>
           <div className="item">
