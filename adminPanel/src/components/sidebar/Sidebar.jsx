@@ -18,7 +18,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Xcitmedia Panel</span>
+          <span className="logo">Constructor Buddy</span>
         </Link>
       </div>
       <hr />
@@ -35,13 +35,13 @@ const Sidebar = () => {
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
-              <span>Users</span>
+              <span>Workers</span>
             </li>
           </Link>
           <Link to="/projects" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
-              <span>Projects</span>
+              <span>Send Reports</span>
             </li>
           </Link>
           <Link to="/inventory" style={{ textDecoration: "none" }}>
@@ -53,7 +53,38 @@ const Sidebar = () => {
           <Link to="/assignWorkers" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
+              <span>Projects</span>
+            </li>
+          </Link>
+          <Link to="/attendance" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Attendance</span>
+            </li>
+          </Link>
+          <Link to="/imagetotext" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>OCR</span>
+            </li>
+          </Link>
+          <Link to="/leaderboard" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Top Workers</span>
+            </li>
+          </Link>
+          <Link to="/fundDonation" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Fund Donation</span>
               <span>Workers</span>
+            </li>
+          </Link>
+          <Link to="/logistics" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Logistics</span>
             </li>
           </Link>
           {/* <li>
@@ -82,10 +113,12 @@ const Sidebar = () => {
             <WysiwygIcon className="icon" />
             <span>System Health</span>
           </li>
+          <Link to="/login">
           <li>
             <VpnKeyIcon className="icon" />
-            <span>Logs</span>
+            <span>Login</span>
           </li>
+          </Link>
           <li>
             <SettingsIcon className="icon" />
             <span>Settings</span>
