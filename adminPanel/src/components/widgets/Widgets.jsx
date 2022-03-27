@@ -21,6 +21,19 @@ const Widgets = ({ type }) => {
         ),
       };
       break;
+      case "userhindi":
+        data = {
+          title: "उपयोगकर्ताओं",
+          count: false,
+          link: "सभी उपयोगकर्ताओं को देखें",
+          icon: (
+            <AccountCircleOutlinedIcon
+              className="icon"
+              style={{ color: "crimson", backgroundColor: "rgba(255,0,0,0.2)" }}
+            />
+          ),
+        };
+        break;
     case "blogs":
       data = {
         title: "blogs",
@@ -34,6 +47,19 @@ const Widgets = ({ type }) => {
         ),
       };
       break;
+      case "blogshindi":
+        data = {
+          title: "परियोजनाओं",
+          count: true,
+          link: "see all blogs",
+          icon: (
+            <BackupTableIcon
+              className="icon"
+              style={{ color: "green", backgroundColor: "rgba(255,0,0,0.2)" }}
+            />
+          ),
+        };
+        break;
     case "categories":
       data = {
         title: "category",
@@ -47,11 +73,37 @@ const Widgets = ({ type }) => {
         ),
       };
       break;
+      case "categorieshindi":
+      data = {
+        title: "श्रेणी",
+        count: false,
+        link: "सभी श्रेणी देखें",
+        icon: (
+          <ClassIcon
+            className="icon"
+            style={{ color: "orange", backgroundColor: "rgba(255,0,0,0.2)" }}
+          />
+        ),
+      };
+      break;
     case "viewership":
       data = {
         title: "Viewership",
         count: true,
         link: "see all Viewership",
+        icon: (
+          <QueryStatsIcon
+            className="icon"
+            style={{ color: "purple", backgroundColor: "rgba(255,0,0,0.2)" }}
+          />
+        ),
+      };
+      break;
+      case "viewershiphindi":
+      data = {
+        title: "दर्शकों की संख्या",
+        count: true,
+        link: "सभी व्यूअरशिप देखें",
         icon: (
           <QueryStatsIcon
             className="icon"
