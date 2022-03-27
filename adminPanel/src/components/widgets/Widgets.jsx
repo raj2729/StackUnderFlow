@@ -10,9 +10,9 @@ const Widgets = ({ type }) => {
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "WORKERS",
         count: false,
-        link: "see all users",
+        link: "see all",
         icon: (
           <AccountCircleOutlinedIcon
             className="icon"
@@ -36,9 +36,9 @@ const Widgets = ({ type }) => {
         break;
     case "blogs":
       data = {
-        title: "blogs",
+        title: "PROJECTS",
         count: true,
-        link: "see all blogs",
+        link: "see al",
         icon: (
           <BackupTableIcon
             className="icon"
@@ -62,9 +62,9 @@ const Widgets = ({ type }) => {
         break;
     case "categories":
       data = {
-        title: "category",
+        title: "FUNDS",
         count: false,
-        link: "see all category",
+        link: "see all",
         icon: (
           <ClassIcon
             className="icon"
@@ -88,9 +88,9 @@ const Widgets = ({ type }) => {
       break;
     case "viewership":
       data = {
-        title: "Viewership",
+        title: "FUNDS",
         count: true,
-        link: "see all Viewership",
+        link: "see all",
         icon: (
           <QueryStatsIcon
             className="icon"
