@@ -308,10 +308,92 @@ const sendEventRegistrationEmail = async (req, res) => {
   //   }, 7000);
 };
 
+const sendProgressReport = async (req, res) => {
+  let output = "";
+
+  output += `<p>Hey there,</p>
+    <p>Please find the Project Progress Report herewith.</p>
+    <p><strong>Date:</strong> 27th March 2022</p>`;
+  setTimeout(async function () {
+    output += `<table style="border: 1px solid #333;width:90%;border-collapse: collapse;margin-bottom:40px">
+      <thead>
+          <tr>
+              <th style="padding-left:120px;">Total number of projects running: 4</th>
+              <th>  </th>
+          </tr>
+      </thead>`;
+
+    output += `
+            <tr style="background-color: #dddddd;">
+                <td style="border: 1px solid black;text-align: center;padding: 8px">Contractor assigned</td>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">Ramlal Sharma</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">Total number of supervisors</td>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">6</td>
+            </tr>
+            <tr style="background-color: #dddddd;">
+                <td style="border: 1px solid black;text-align: center;padding: 8px">Total number of workers</td>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">389</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">Time required for completion of project</td>
+                <td style="border: 1px solid black;text-align: center;padding: 8px">2 months</td>
+            </tr>
+        `;
+    output += "</table>";
+
+    output =
+      output +
+      "<p><strong>Regards</strong></p><p><strong>Team Construction Buddy</strong></p>";
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: `vptestemail123@gmail.com`,
+        pass: `BLrhZS_m$_F$48Ar`,
+      },
+      // If on localhost
+      tls: {
+        rejectUnauthorized: false,
+      },
+      service: "gmail",
+    });
+
+    let mailOptions = {
+      from: `vptestemail123@gmail.com`,
+      to: `rajsanghavi9@gmail.com`,
+      // to: "rajsanghavi9@gmail.com",
+      subject: "Project Progress report ✔",
+      html: output,
+      text: output,
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        // res.json(error);
+        console.log(error);
+      } else {
+        console.log("Message sent: %s", info.messageId);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        console.log("Weekly Report Sent");
+        res.status(200).json({
+          success: true,
+          emailSuccess: true,
+          // data: allVehiclesDetails,
+        });
+      }
+    });
+  }, 1500);
+};
+
 module.exports = {
   registerUser,
   userLogin,
   getUserDetails,
   updateUserDetails,
   sendEventRegistrationEmail,
+  sendProgressReport,
 };

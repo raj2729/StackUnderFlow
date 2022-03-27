@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { projectColumns, projectRows } from "../../pages/Datatablesourceprojects";
+import {
+  projectColumns,
+  projectRows,
+} from "../../pages/Datatablesourceprojects";
 import { Link } from "react-router-dom";
 const Datatable = () => {
   const [data, setData] = useState(projectRows);
@@ -33,7 +36,7 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add new Project
+        Send Progress Report
         <Link to="/users/new " className="link">
           Add new
         </Link>
