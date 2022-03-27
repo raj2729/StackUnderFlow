@@ -35,13 +35,13 @@ const Sidebar = () => {
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
-              <span>Users</span>
+              <span>Workers</span>
             </li>
           </Link>
           <Link to="/projects" style={{ textDecoration: "none" }}>
             <li>
               <GroupIcon className="icon" />
-              <span>Projects</span>
+              <span>Send Reports</span>
             </li>
           </Link>
           <Link to="/inventory" style={{ textDecoration: "none" }}>
@@ -53,7 +53,31 @@ const Sidebar = () => {
           <Link to="/allblogs" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
-              <span>Blogs</span>
+              <span>Projects</span>
+            </li>
+          </Link>
+          <Link to="/attendance" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Attendance</span>
+            </li>
+          </Link>
+          <Link to="/imagetotext" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>OCR</span>
+            </li>
+          </Link>
+          <Link to="/leaderboard" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Top Workers</span>
+            </li>
+          </Link>
+          <Link to="/fundDonation" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Fund Donation</span>
             </li>
           </Link>
           {/* <li>

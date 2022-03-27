@@ -16,8 +16,10 @@ import Blogs from "./pages/allBlogs/Blogs";
 import Statistics from "./pages/Statistics/Statistics";
 import Chatbot from "./components/Chatbot";
 import Attendance from "./components/Attendance";
+import ImgToTxt from "./components/imgtotext/ImgToTxt";
 // import Dashboard from "./components/adminPanelCompany/Dashboard";
-
+import LeaderBoard from "./pages/LeaderBoard";
+import FundDonation from "./pages/FundDonation";
 function App() {
   const navigate = useNavigate();
   const alanKey =
@@ -87,6 +89,15 @@ function App() {
               element={<New inputs={userInputs} title="Add users" />}
             />
           </Route>
+          <Route path="imagetotext">
+            <Route index element={<ImgToTxt />} />
+
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add users" />}
+            />
+          </Route>
           {/* <Route path="dashboard">
             <Route index element={<Dashboard />} />
 
@@ -103,8 +114,11 @@ function App() {
               path="new"
               element={<New inputs={BlogInputs} title="Add Blog" />}
             />
+            
           </Route>
-        </Routes>
+          <Route path="leaderboard" exact element={<LeaderBoard />} />
+          <Route path="fundDonation" exact element={<FundDonation />} />
+                  </Routes>
         <Chatbot />
       </div>
     </div>

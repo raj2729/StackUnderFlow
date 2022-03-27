@@ -1,12 +1,12 @@
 export const attendaceData = [
   {
-    name: "Naina Sharma",
+    name: "Rahul Trivedi",
     img: "https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/prototypen/w_sexy.jpg",
     present: true,
     workDescription: "Logistic Work",
     images: [
-      "https://connect-assets.prosple.com/cdn/ff/qtYJcQHg7cpcoXl_BXJ4UOdqS4FBwitfcEg-zpR2U8w/1567122485/public/styles/scale_890_no_upsize/public/2019-08/feature-article-an-introduction-to-jobs-in-the-transport-and-logistics-industry-838x484-2019.png?itok=5sD1qsda",
-      "https://afar-production.imgix.net/uploads/images/post_images/images/tyS4sw89F6/original_IMG_20190421_121611.jpg?auto=compress,format&lossless=true&w=845",
+      "https://imgnew.outlookindia.com/public/uploads/articles/2020/5/21/Labours_20190325.jpg",
+      "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/07/01/842997-labour-1.jpg",
       "https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1613276997000/photosp/f55fc5c2-8fc6-4a93-a4a4-a9de17f7ede4/stock-photo-sea-beach-sand-male-summer-environment-clean-broom-man-f55fc5c2-8fc6-4a93-a4a4-a9de17f7ede4.jpg",
     ],
     workVerified: true,
@@ -17,8 +17,8 @@ export const attendaceData = [
     present: true,
     workDescription: "Cleaning",
     images: [
-      "https://eartheclipse.com/wp-content/uploads/2018/11/people-cleaning-beach.jpeg",
-      "https://images.yourstory.com/cs/2/2d86ed30b28211e8b2e7114aea10c711/Imagenppx-1585058353573.jpg?fm=auto&ar=2:1&mode=crop&crop=faces&w=1270",
+      "https://3.imimg.com/data3/VC/VQ/MY-18932608/construction-line-labours-500x500.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPx2eCzMagf1I19YYF4p1Omhc6BtfnwLFXsQ&usqp=CAU",
       "https://en-media.thebetterindia.com/uploads/2019/06/Beach-Cleaning-WP-1.jpg?compress=true&quality=95&w=1024&dpr=1.6",
     ],
     workVerified: false,
