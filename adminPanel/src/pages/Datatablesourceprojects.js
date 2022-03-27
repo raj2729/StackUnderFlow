@@ -33,6 +33,7 @@ export const projectColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
     field: "user",
+    field: "name",
     headerName: "Project",
     width: 280,
     renderCell: (params) => {
@@ -40,12 +41,14 @@ export const projectColumns = [
         <div className="cellwithimg">
           <img className="cellimg" src={params.row.img} alt="avatar" />
           {params.row.username}
+          {params.row.name}
         </div>
       );
     },
   },
   {
     field: "email",
+    field: "location",
     headerName: "Address",
     width: 280,
   },

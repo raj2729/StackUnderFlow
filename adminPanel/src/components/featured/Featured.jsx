@@ -8,14 +8,14 @@ const Featured = () => {
   return (
     <div className="featured">
       <div className="top">
-        <h1 className="title">Total blogs</h1>
+        <h1 className="title">Tota</h1>
         <MoreVertIcon fontSize="small" />
       </div>
       <div className="bottom">
         <div className="featuredChart">
           <CircularProgressbar value={66} text={"70%"} strokeWidth={4} />
         </div>
-        <p className="title">Total Blogs created in this week</p>
+        <p className="title">Total Funds genereted in this week</p>
         <p className="desc">
           {" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
