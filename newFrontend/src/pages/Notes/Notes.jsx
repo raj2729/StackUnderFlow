@@ -10,7 +10,7 @@ import './styles.css'
 
 function Notes() {
     const [notes, setNotes] = useState([
-        { "title": "Homework", "content": "Complete maths Homework given in maths class." },
+        { "title": "Cement", "content": "Send cement to 5th floor." },
         { "title": "BackPack", "content": "Pack your bag for according to tomorrow's time-table" }
     ]);
 

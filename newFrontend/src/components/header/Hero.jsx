@@ -7,7 +7,7 @@ function Hero() {
   const bluePrint = {
     heading: "We make your WORK easy",
     subHeading:
-      "Take on the professional world by learning and practicing in-demand skills with us.",
+      "Take on the professional world by learning the skills and get reminder of your tasks.",
     callToAction: "Enroll Now",
   };
 
@@ -16,7 +16,7 @@ function Hero() {
       <div className="flex flex-col items-center lg:flex-row">
         <div className="w-full text-white  flex flex-col items-start gap-6 lg:w-[50%]">
           <h6 style={{marginTop:"80px"}} className="text-primary-color-light relative uppercase font-semibold text-base after:absolute after:right-[-55%] after:top-[50%] after:translate-y-[-50%] after:h-[2px] after:bg-current after:w-[50%] lg:text-lg">
-            Path to your future
+            Roadmap to your tasks
           </h6>
           <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl">
             {bluePrint.heading}

@@ -48,9 +48,9 @@ const {theme} = useStore()
 			</div>
 
 			<div className="flex-[0.5] flex flex-col gap-6 bor border-l pl-12">
-				<WhyFeature title="Low Cost" />
-				<WhyFeature title="Learn With Experts" />
-				<WhyFeature title="Diffrent Course Variation" />
+				<WhyFeature title="Notes Section" />
+				<WhyFeature title="Certified Courses" />
+				<WhyFeature title="Complaint Forum" />
 			</div>
 		</section>
 	);

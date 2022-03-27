@@ -21,7 +21,7 @@ const InstructorCard = ({ image }) => {
 			<div className="flex-[0.8] p-4 flex flex-col items-start gap-4">
 				<div>
 					<h6 className="text-2xl font-semibold">John Doe</h6>
-					<span>Professional React Developer</span>
+					<span>Professional Civil Engineer</span>
 				</div>
 				<div className="h-[2px] bg-primary-color-light w-[50%]"></div>
 				<p>
@@ -44,8 +44,8 @@ function Teachers() {
 	return (
 		<div className={teachersStyles} >
 			<SectionHeading
-				subHeading="Instructors"
-				heading="Our professional & Expert Course Instructors"
+				subHeading="Creators"
+				heading="We ensure that you have a good working experience"
 			/>
 			<div className="w-full grid grid-cols-1 gap-4 mt-16 md:grid-cols-2">
 				<InstructorCard image={instOneImage} />

@@ -64,7 +64,7 @@ function Navbar() {
     <>
       <nav className={navClasses}>
         <Link to="/">
-          <h2 className="text-3xl font-semibold">XcitEducation</h2>
+          <h2 className="text-3xl font-semibold">Construction Buddy</h2>
         </Link>
 
         {/* navlinks start */}

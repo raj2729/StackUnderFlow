@@ -3,8 +3,8 @@ import { footerStyles } from "../styles/styleObjects";
 
 
 export const footerPrint = {
-    brandName: "XcitEducation",
-    description: "Building a strong foundation, across the nation at XcitEducation!",
+    brandName: "Construction Buddy",
+    description: "Building a strong foundation, across the nation at Construction Buddy!",
     lists: [
       [
         { title: "Our Projects" },

@@ -79,7 +79,7 @@ const Profile = () => {
         <aside className={asideClasses}>
           <Link to="/">
             <h4 className="text-2xl font-semibold cursor-pointer">
-              XcitEducation
+            Construction Buddy
             </h4>
           </Link>
           <ul className="mt-10 flex flex-col gap-12">
