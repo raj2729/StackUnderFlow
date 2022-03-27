@@ -19,14 +19,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <div className="search">
+        <div className="search" style={{position:"relative", bottom:"32px"}}>
           <input type="text" placeholder="search..." />
           <SearchIcon />
         </div>
         
         <div className="items">
         <Box sx={{ minWidth: 120, marginRight:"10px" }}>
-      <FormControl fullWidth>
+      <FormControl fullWidth style={{position:"relative", bottom:"35px"}}>
         <InputLabel id="demo-simple-select-label">🌐</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -42,14 +42,14 @@ const Navbar = () => {
         </Select>
       </FormControl>
     </Box>
-          <div className="item">
+          <div className="item" style={{position:"relative", bottom:"35px"}}>
             <ExitToAppIcon className="icon" />
           </div>
-          <div className="item">
+          <div className="item" style={{position:"relative", bottom:"35px"}}>
             <NotificationAddIcon className="icon" />
             <div className="counter">1</div>
           </div>
-          <div className="item">
+          <div className="item" style={{position:"relative", bottom:"35px"}}>
             <img
               src="https://images.pexels.com/photos/3844788/pexels-photo-3844788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               className="avatar"
