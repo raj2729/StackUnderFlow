@@ -1,16 +1,16 @@
 // import React, { useState } from "react";
-// import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 
 // import MenuItem from "@material-ui/core/MenuItem";
 // import FormControl from "@material-ui/core/FormControl";
 // import Select from "@material-ui/core/Select";
 // import "leaflet/dist/leaflet.css";
-// import construction from "../assets/construction.png";
+import construction from "../assets/construction.png";
 // import { Card } from "@material-ui/core";
 // import { Button } from "@material-ui/core";
 
-// import { Icon } from "leaflet";
-// import "../App.css";
+import { Icon } from "leaflet";
+import "../App.css";
 // const position = [51.505, -0.09];
 // const ConstructionIcon = new Icon({
 //   iconUrl: construction,
@@ -62,12 +62,17 @@
 
 // export default Map;
 import { useCallback, useMemo, useRef, useState, useEffect } from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+// import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet";
 
 const center = {
   lat: 51.505,
   lng: -0.09,
 };
+
+const ConstructionIcon = new Icon({
+  iconUrl: construction,
+  iconSize: [40, 40],
+});
 
 function DraggableMarker() {
   const [draggable, setDraggable] = useState(false);
