@@ -14,6 +14,7 @@ import "./Dashboard.css";
 // import "../App.css";
 import Contractors from "./Contractors.js";
 import AddProject from "./AddProject";
+import Projects from "./Projects";
 
 const useStyles = makeStyles({
   paper: {
@@ -50,6 +51,13 @@ function Dashboard() {
           <Button onClick={() => setMode("addproject")}>
             <h4>
               <i className="fa fa-play-circle"></i> Add Project
+            </h4>
+          </Button>
+        </ListItem>
+        <ListItem>
+          <Button onClick={() => setMode("projects")}>
+            <h4>
+              <i className="fa fa-play-circle"></i> Project List
             </h4>
           </Button>
         </ListItem>
@@ -136,6 +144,7 @@ function Dashboard() {
         )}
         {mode === "contractors" && <Contractors />}
         {mode === "addproject" && <AddProject />}
+        {mode === "projects" && <Projects />}
       </div>
     </>
   );

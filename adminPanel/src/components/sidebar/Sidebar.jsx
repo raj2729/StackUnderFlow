@@ -62,6 +62,12 @@ const Sidebar = () => {
               <span>Logistics</span>
             </li>
           </Link>
+          <Link to="/assignTasks" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Assign Tasks</span>
+            </li>
+          </Link>
           {/* <li>
             <ListAltIcon className="icon" />
             <span>orders</span>
