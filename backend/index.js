@@ -9,6 +9,7 @@ var axios = require("axios");
 // Routes
 const userRoutes = require("./routes/userRoutes");
 const donationRoutes = require("./routes/donationRoutes");
+const phoneCallRoutes = require("./routes/phoneCallRoutes");
 
 // const orderRoutes = require("./routes/orderRoutes");
 // const discussRoutes = require("./routes/discussRoutes");
@@ -80,6 +81,8 @@ app.post("/sendCertificate", async (req, res) => {
 
 app.use("/user", userRoutes);
 app.use("/donation", donationRoutes);
+app.use("/phoneCall", phoneCallRoutes);
+
 // app.use("/order", orderRoutes);
 // app.use("/discuss", discussRoutes);
 // app.use("/testimonial", testimonialRoutes);
@@ -159,14 +162,14 @@ const io = require("socket.io")(server);
 const users = {};
 
 io.on("connection", (socket) => {
-  console.log(socket.id)
+  console.log(socket.id);
   socket.on("new-user", (name) => {
-    console.log("new user")
+    console.log("new user");
     users[socket.id] = name;
     socket.broadcast.emit("user-connected", name);
   });
   socket.on("send-chat-message", (message) => {
-    console.log("Message recieved")
+    console.log("Message recieved");
     socket.broadcast.emit("chat-message", {
       name: message.sender,
       message: message.message,

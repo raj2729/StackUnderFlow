@@ -98,6 +98,12 @@ const Sidebar = () => {
               <span>Meeting</span>
             </li>
           </Link>
+          <Link to="/sendReminder" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Send Reminder</span>
+            </li>
+          </Link>
           {/* <li>
             <ListAltIcon className="icon" />
             <span>orders</span>

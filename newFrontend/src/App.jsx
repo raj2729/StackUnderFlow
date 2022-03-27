@@ -44,6 +44,7 @@ import KanbanBoard from "./pages/KanbanBoard";
 import Notes from "./pages/Notes/Notes"
 import SpeechyForm from "./pages/SpeechyForm";
 import Map from "./components/Map";
+import DiscussionForum from "../src/components/discussionForum/DiscussionForum";
 function App() {
   const [loading, setLoading] = useState(true);
   let stylesForProfile = "bg-red-800";
@@ -100,14 +101,14 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
           navigate("/map");
         } else if (command === "blogs") {
           navigate("/blogs");
-        } else if(command=="fillname"){
-          console.log("fillname command")
-          localStorage.setItem("name", "Vidhish")
+        } else if (command == "fillname") {
+          console.log("fillname command");
+          localStorage.setItem("name", "Vidhish");
         }
       },
     });
   }, []);
-//18 Mar 2022 - added Global Context from ThemeContext
+  //18 Mar 2022 - added Global Context from ThemeContext
   return (
     <>
       {loading ? (
@@ -173,6 +174,11 @@ mutation CreateQuestion($courseId: String!, $userId: String!, $question: String!
               <Route path="/kanbanboard" element={<KanbanBoard />} exact />
               <Route path="/hin" element={<HomeHindi />} exact />
               <Route path="/editprofile" element={<SpeechyForm />} exact />
+              <Route
+                path="/discussionForum"
+                element={<DiscussionForum />}
+                exact
+              />
               {/* <Route path="/stories" element={<Stories />} exact /> */}
               <Route path="/*" element={<NotFound />} />
               // <Route path="/coursedetails/:id" element={<CourseDetails />} />

@@ -149,7 +149,7 @@ const Navbar = () => {
               Construction Buddy
             </Link>
           </Typography>
-          
+
           <Select
             style={{ marginRight: "20px" }}
             labelId="demo-simple-select-label"
@@ -158,29 +158,29 @@ const Navbar = () => {
             // onChange={handleChange}
           >
             <Link to="/">
-            <MenuItem
-              value={10}
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              English
-            </MenuItem>
+              <MenuItem
+                value={10}
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                English
+              </MenuItem>
             </Link>
             <Link to="/hin">
-            <MenuItem
-              value={20}
-              onClick={() => {
-                navigate("/hin");
-              }}
-            >
-              हिंदी
-            </MenuItem>
+              <MenuItem
+                value={20}
+                onClick={() => {
+                  navigate("/hin");
+                }}
+              >
+                हिंदी
+              </MenuItem>
             </Link>
           </Select>
 
           <div>
-              {/* <Link
+            {/* <Link
                 to={"/signup"}
                 style={{ textDecoration: "none", color: "white" }}
               >
@@ -188,16 +188,16 @@ const Navbar = () => {
                   Sign Up
                 </Button>
               </Link> */}
-              &nbsp;
-              <Link
-                to={"/login"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <Button variant="contained" color="primary">
-                  Log In
-                </Button>
-              </Link>
-            </div>
+            &nbsp;
+            <Link
+              to={"/login"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Button variant="contained" color="primary">
+                Log In
+              </Button>
+            </Link>
+          </div>
           {/* {userInfo ? (
             <>
               <Button
@@ -254,23 +254,29 @@ const Navbar = () => {
             </ListItem>
           </List>
         </Link>
-        <Link to={`/editprofile`} style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={"/discussionForum"}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <List>
+            <ListItem button key="Discussion Forum">
+              <ListItemIcon>
+                <NoteAddIcon />
+              </ListItemIcon>
+              <ListItemText primary="Discussion Forum" />
+            </ListItem>
+          </List>
+        </Link>
+        <Link
+          to={`/editprofile`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <List>
             <ListItem button key="Edit Profile">
               <ListItemIcon>
                 <BookIcon />
               </ListItemIcon>
               <ListItemText primary="Edit Profile" />
-            </ListItem>
-          </List>
-        </Link>
-        <Link to={`/blogs`} style={{ textDecoration: "none", color: "black" }}>
-          <List>
-            <ListItem button key="Blogs">
-              <ListItemIcon>
-                <BookIcon />
-              </ListItemIcon>
-              <ListItemText primary="Blogs" />
             </ListItem>
           </List>
         </Link>
@@ -284,6 +290,27 @@ const Navbar = () => {
                 <VerifiedUserIcon />
               </ListItemIcon>
               <ListItemText primary="Projects Completed" />
+            </ListItem>
+          </List>
+        </Link>
+        <Link to={`/notes`} style={{ textDecoration: "none", color: "black" }}>
+          <List>
+            <ListItem button key="Notes">
+              <ListItemIcon>
+                <NoteAddIcon />
+              </ListItemIcon>
+              <ListItemText primary="Notes" />
+            </ListItem>
+          </List>
+        </Link>
+        {/* 
+        <Link to={`/blogs`} style={{ textDecoration: "none", color: "black" }}>
+          <List>
+            <ListItem button key="Blogs">
+              <ListItemIcon>
+                <BookIcon />
+              </ListItemIcon>
+              <ListItemText primary="Blogs" />
             </ListItem>
           </List>
         </Link>
@@ -310,16 +337,6 @@ const Navbar = () => {
             </ListItem>
           </List>
         </Link>
-        <Link to={`/notes`} style={{ textDecoration: "none", color: "black" }}>
-          <List>
-            <ListItem button key="Notes">
-              <ListItemIcon>
-                <NoteAddIcon />
-              </ListItemIcon>
-              <ListItemText primary="Notes" />
-            </ListItem>
-          </List>
-        </Link>
         <Link to={`/chat`} style={{ textDecoration: "none", color: "black" }}>
           <List>
             <ListItem button key="Chat">
@@ -330,7 +347,10 @@ const Navbar = () => {
             </ListItem>
           </List>
         </Link>
-        <Link to={`/logisticsdashboard`} style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={`/logisticsdashboard`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <List>
             <ListItem button key="Logistics">
               <ListItemIcon>
@@ -340,7 +360,10 @@ const Navbar = () => {
             </ListItem>
           </List>
         </Link>
-        <Link to={`/kanbanboard`} style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={`/kanbanboard`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <List>
             <ListItem button key="AssignTasks">
               <ListItemIcon>
@@ -375,7 +398,7 @@ const Navbar = () => {
               <ListItemText primary="LeaderBoard" />
             </ListItem>
           </List>
-        </Link>
+        </Link> */}
 
         {/* {userInfo ? (
           <Link

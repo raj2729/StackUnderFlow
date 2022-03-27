@@ -22,8 +22,8 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(srno, avatar, name, points, badge, payment) {
-  return { srno, avatar, name, points, badge, payment };
+function createData(srno, avatar, name, payment) {
+  return { srno, avatar, name, payment };
 }
 
 const loadRazorPay = async () => {
@@ -43,76 +43,23 @@ const loadRazorPay = async () => {
 };
 
 const rows = [
-  createData("1", "RS", "Raj Sanghavi", "2100", "gold", "Bonus"),
-  createData("2", "VP", "Vidhish Panchal", "2000", "gold", "Bonus"),
-  createData("3", "AA", "Adnan Ahmed", "2000", "gold", "Bonus"),
-  createData("4", "BS", "Burhan Sawliwala", "1800", "gold", "Bonus"),
-  createData("5", "TA", "Thakur Avnod", "1700", "silver", "Bonus"),
-  createData("6", "TR", "Tripur Rashi", "1600", "silver", "Bonus"),
-  createData("7", "UV", "Urvashi Vaani", "1500", "silver", "Bonus"),
+  createData("1", "RS", "Raj Sanghavi", "Send Reminder Call"),
+  createData("2", "VP", "Vidhish Panchal", "Send Reminder Call"),
+  createData("3", "AA", "Adnan Ahmed", "Send Reminder Call"),
+  createData("4", "BS", "Burhan Sawliwala", "Send Reminder Call"),
+  createData("5", "TA", "Thakur Avnod", "Send Reminder Call"),
+  createData("6", "TR", "Tripur Rashi", "Send Reminder Call"),
+  createData("7", "UV", "Urvashi Vaani", "Send Reminder Call"),
 ];
-const LeaderBoard = () => {
+const SendReminder = () => {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const handleRazorpayResponse = async (
-    razorpay_payment_id,
-    razorpay_order_id,
-    razorpay_signature
-  ) => {
-    if (razorpay_payment_id) {
-      console.log("Successful");
-      Swal.fire("Donation has been made successfully", `Amount: $}`, "success");
-    } else {
-      console.log("Unsuccessful");
-    }
-  };
+  const handlePhoneCall = async () => {
+    console.log("Phone call is being made");
+    const { data } = await axios.post("/phoneCall/makePhoneCall");
 
-  const displayRazorPay = async () => {
-    console.log("Hello");
-    const res = await loadRazorPay();
-
-    if (!res) {
-      alert("Razorpay SDK Failed. Please check your connection.");
-      return;
-    }
-
-    const { data } = await axios.post("/donation/razorpay");
-
-    // console.log(data);
-
-    const options = {
-      key: "rzp_test_vdRitP9HytsLLm", // Enter the Key ID generated from the Dashboard
-      // amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      // currency: "INR",
-      amount: data.amount,
-      currency: data.currency,
-      order_id: data.id,
-      name: "Construction Buddy",
-      description: "Test Transaction",
-      // order_id: "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
-        handleRazorpayResponse(
-          response.razorpay_payment_id,
-          response.razorpay_order_id,
-          response.razorpay_signature
-        );
-      },
-      prefill: {
-        name: "Raj",
-        // name: userInfo.data.name,
-        email: "raj@example.com",
-        // email: userInfo.data.email,
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#DC143C",
-      },
-    };
-    var paymentObject = new window.Razorpay(options);
-    paymentObject.open();
+    console.log(data);
   };
 
   return (
@@ -136,7 +83,7 @@ const LeaderBoard = () => {
                   fontWeight: "bold",
                 }}
               >
-                LeaderBoard
+                Send Reminder
               </h1>
               <br />
               <TableContainer component={Paper}>
@@ -176,6 +123,7 @@ const LeaderBoard = () => {
                           Name
                         </h3>
                       </TableCell>
+
                       <TableCell align="right">
                         <h3
                           style={{
@@ -184,29 +132,7 @@ const LeaderBoard = () => {
                             fontWeight: "bold",
                           }}
                         >
-                          Points
-                        </h3>
-                      </TableCell>
-                      <TableCell align="right">
-                        <h3
-                          style={{
-                            textAlign: "center",
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          Badge
-                        </h3>
-                      </TableCell>
-                      <TableCell align="right">
-                        <h3
-                          style={{
-                            textAlign: "center",
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          Payment
+                          Reminders
                         </h3>
                       </TableCell>
                     </TableRow>
@@ -221,23 +147,17 @@ const LeaderBoard = () => {
                           <Avatar>{row.avatar}</Avatar>
                         </TableCell>
                         <TableCell align="center">{row.name}</TableCell>
-                        <TableCell align="center">{row.points}</TableCell>
-                        <TableCell align="center">
-                          <Button style={{ backgroundColor: `${row.badge}` }}>
-                            {row.badge}
-                          </Button>
-                        </TableCell>
+
                         <TableCell align="center">
                           <Button
                             color="primary"
                             variant="contained"
-                            onClick={displayRazorPay}
+                            onClick={handlePhoneCall}
                           >
                             {row.payment}
                           </Button>
                         </TableCell>
                         {/* <TableCell align="center"><Link to="/event/particularEvent"><Button variant="contained" color="primary">{row.details}</Button></Link></TableCell> */}
-
                         {/* <TableCell align="center"><Button variant="contained" color="primary"><EmailIcon style={{ marginRight: "5px" }} />{row.certificate}</Button></TableCell> */}
                       </TableRow>
                     ))}
@@ -253,4 +173,4 @@ const LeaderBoard = () => {
   );
 };
 
-export default LeaderBoard;
+export default SendReminder;
