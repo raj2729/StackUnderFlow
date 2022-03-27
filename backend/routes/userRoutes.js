@@ -6,6 +6,7 @@ const {
   getUserDetails,
   updateUserDetails,
   sendEventRegistrationEmail,
+  sendProgressReport,
 } = require("../controllers/userControllers");
 
 const { protect } = require("../middlewares/protectedRoutes");
@@ -25,5 +26,7 @@ router.route("/userDetails/:id").get(protect, getUserDetails);
 router.route("/userUpdate/:id").put(protect, updateUserDetails);
 
 router.route("/sendEventRegistrationEmail").post(sendEventRegistrationEmail);
+
+router.route("/sendProgressReport").post(sendProgressReport);
 
 module.exports = router;

@@ -39,7 +39,7 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        All Projects
+        Send Progress Report
         <Link to="/users/new " className="link">
           Add new
         </Link>
