@@ -38,7 +38,7 @@ const Statistics = () => {
         <div className="charts">
           <Chart
             aspect={2 / 1}
-            title="Total blogs in last six months"
+            title="Total workers in last six months"
             type={BarChart}
             typename={Bar}
           />
@@ -49,7 +49,7 @@ const Statistics = () => {
 
           <Chart
             aspect={2 / 1}
-            title="Total Viewership in last six months"
+            title="Total projects in last six months"
             type={AreaChart}
             typename={Area}
           />
